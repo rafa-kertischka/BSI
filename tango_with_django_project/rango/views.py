@@ -2,7 +2,9 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 def index(request):
-    context_dict = {'boldmessage': "Crunchy, creamy, cookie, candy, cupcake!"}
+    context_dict = {}
+    context_dict['boldmessage'] = "Olá Mundo!"
+    context_dict['Autor'] = "Rafael Mendes"
     print(request)
     print("Dicionário", context_dict)
     texto = '''
