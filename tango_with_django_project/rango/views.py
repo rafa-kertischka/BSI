@@ -1,14 +1,17 @@
 from django.http import HttpResponse
+from django.shortcuts import render
 
 def index(request):
-
+    context_dict = {'boldmessage': "Crunchy, creamy, cookie, candy, cupcake!"}
+    print(request)
+    print("Dicionário", context_dict)
     texto = '''
     <h1> Rango </h1>
     Essa é a página principal do Rango
     
     <br/><a href='/rango/about/'>Sobre o rango</a>
     '''
-    return HttpResponse(texto)
+    return render(request, 'rango/index.html', context=context_dict)
 
 
 def about(request):
