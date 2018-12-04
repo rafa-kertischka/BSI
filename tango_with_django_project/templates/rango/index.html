@@ -5,7 +5,7 @@
     <div class="jumbotron">
         <h2 class="display-5">Rango diz...</h2>
         {% if user.is_superuser %}
-            Olá chefe!
+            Salve
         {% elif user.is_authenticated %}
             Olá {{ user.username }}
         {% else %}
